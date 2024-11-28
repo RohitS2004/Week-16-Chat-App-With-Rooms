@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Input, Button, Message } from "../components";
 import { Send } from "../assets";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addMessage } from "../feature/chat";
 
@@ -68,7 +68,7 @@ const Chat = () => {
                 <div className="flex-grow"></div>
                 {message &&
                     message.map(
-                        (msg: any, index: number) =>
+                        (msg: any) =>
                             // Ensure msg is defined before accessing its properties
                             msg && (
                                 msg.type && msg.type === "send" ? (
